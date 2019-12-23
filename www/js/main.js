@@ -28,7 +28,7 @@ var imgPath = {
     
 
 var BB = {
-    stage: new PIXI.Stage(0x000000),
+    stage: new PIXI.Stage(0xffffffff),
     renderer: null,
     screenSize: null,
     paddle: null,
@@ -42,7 +42,7 @@ var BB = {
     // Create blocks map
     setMap: function() {
         var blockMap = [
-            [null,      null,       null,       null,       null,       'blue',     null,       null,       null,       null],
+            [null,      null,       null,       null,       null,       'blue',     null,     null,       null,       null],
             [null,      null,       null,       null,       'red',      'red',      'blue',     null,       null,       null],
             [null,      null,       null,       'red',      'red',      null,       null,       'blue',     null,       null],
             [null,      null,       'red',      'red',      null,       null,       null,       null,       'blue',     null],    
@@ -50,7 +50,10 @@ var BB = {
             [null,      null,       'red',      'red',       null,       null,       null,       'silver',   'silver',   null],    
             [null,      null,       null,       'red',      'red',       null,       'silver',   'silver',   null,       null],    
             [null,      null,       null,       null,       'silver',   'silver',   'silver',   null,       null,       null],
-            [null,      null,       null,       null,       null,       'silver',   null,       null,       null,       null]
+            [null,      null,       null,       null,       null,       'silver',   null,       null,       null,       null],
+             [null,      null,       null,       null,       'silver',   'silver',   'silver',   null,       null,       null],
+              [null,      null,       null,       null,       'silver',   'silver',   'silver',   null,       null,       null],
+               [null,      null,       null,       null,       'silver',   'silver',   'silver',   null,       null,       null]
         ];
         
         for(j = 0; j < blockMap.length; j++) {
@@ -235,7 +238,6 @@ var BB = {
         BB.scoreLabel.position.y = 20;
         BB.stage.addChild(BB.scoreLabel);
         BB.setScore(0);
-        
         /*
         var label = new PIXI.Text("ACCEL:", {font: "24px/1.2 vt", fill: "red"});
         label.position.x = 160;
@@ -464,5 +466,7 @@ function getUa() {
         return 'Android';
     } else return false;
 }
+setInterval(clock, 1000);
+
 
 })();
