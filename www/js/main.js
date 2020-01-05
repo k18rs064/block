@@ -42,18 +42,17 @@ var BB = {
     // Create blocks map
     setMap: function() {
         var blockMap = [
-            [null,      null,       null,       null,       null,       'blue',     null,     null,       null,       null],
-            [null,      null,       null,       null,       'red',      'red',      'blue',     null,       null,       null],
-            [null,      null,       null,       'red',      'red',      null,       null,       'blue',     null,       null],
-            [null,      null,       'red',      'red',      null,       null,       null,       null,       'blue',     null],    
-            [null,      'red',      'red',      null,       null,       'gold',     null,       null,       'silver',   'silver'],    
-            [null,      null,       'red',      'red',       null,       null,       null,       'silver',   'silver',   null],    
-            [null,      null,       null,       'red',      'red',       null,       'silver',   'silver',   null,       null],    
-            [null,      null,       null,       null,       'silver',   'silver',   'silver',   null,       null,       null],
-            [null,      null,       null,       null,       null,       'silver',   null,       null,       null,       null],
-             [null,      null,       null,       null,       'silver',   'silver',   'silver',   null,       null,       null],
-              [null,      null,       null,       null,       'silver',   'silver',   'silver',   null,       null,       null],
-               [null,      null,       null,       null,       'silver',   'silver',   'silver',   null,       null,       null]
+            ['blue','blue','gold','gold','gold','gold', 'gold','gold','blue','blue'],
+            ['blue','gold','silver','silver','silver','silver','silver','silver','gold','blue'],
+            ['gold','silver','silver','silver','silver','silver', 'silver','silver','silver','gold'],
+            ['gold','silver','silver','gold','silver','silver','gold','silver', 'silver','gold'],  
+            ['gold','silver','silver','silver','red','red','silver','silver','silver','gold'],    
+            ['gold','silver','silver','silver','red','red','silver','silver','silver','gold'],    
+            ['gold','silver','silver','silver','silver','silver', 'silver','silver','silver','gold'],    
+            ['gold','silver','silver','gold','silver','silver', 'gold','silver','silver','gold'],
+            ['gold','silver','silver','silver', 'gold','gold','silver','silver','silver','gold'],
+            ['blue','gold', 'silver','silver','silver','silver','silver','silver','gold','blue'],
+            ['blue','blue','gold','gold','gold','gold','gold','gold','blue','blue'],
         ];
         
         for(j = 0; j < blockMap.length; j++) {
