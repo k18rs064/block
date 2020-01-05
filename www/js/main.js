@@ -28,7 +28,7 @@ var imgPath = {
     
 
 var BB = {
-    stage: new PIXI.Stage(0xffffffff),
+    stage: new PIXI.Stage(0x111111ff),
     renderer: null,
     screenSize: null,
     paddle: null,
