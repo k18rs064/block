@@ -3,7 +3,7 @@
 var SETTINGS_GRAVITY = 0.07,
     SETTINGS_FPS = 30,
     SETTINGS_BALL_NUM = 1,
-    SETTINGS_BOUND_X = 0.13,
+    SETTINGS_BOUND_X = 0.07,
     SETTINGS_BOUND_Y = 1.04,
     SETTINGS_ACCELEROMETER_RELOAD_FREQ = 100,
     SETTINGS_PADDLE_ACCEL = 2.8,
@@ -91,8 +91,8 @@ var BB = {
         var texture = PIXI.Texture.fromImage(imgPath["block_" + color], false);
         var block = new PIXI.Sprite(texture);
      
-        block.anchor.x = 0.5;
-        block.anchor.y = 0.5;
+        block.anchor.x = 0.2;
+        block.anchor.y = 0.2;
      
         block.position.x = x;
         block.position.y = y;
